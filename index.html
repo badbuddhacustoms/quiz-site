@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>5-Question Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .question {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Quick Quiz</h1>
+
+<form id="quizForm">
+  <div class="question">
+    <label for="q1">Question 1:</label>
+    <input type="text" id="q1" name="q1" placeholder="Your answer here">
+  </div>
+  <div class="question">
+    <label for="q2">Question 2:</label>
+    <input type="text" id="q2" name="q2" placeholder="Your answer here">
+  </div>
+  <div class="question">
+    <label for="q3">Question 3:</label>
+    <input type="text" id="q3" name="q3" placeholder="Your answer here">
+  </div>
+  <div class="question">
+    <label for="q4">Question 4:</label>
+    <input type="text" id="q4" name="q4" placeholder="Your answer here">
+  </div>
+  <div class="question">
+    <label for="q5">Question 5:</label>
+    <input type="text" id="q5" name="q5" placeholder="Your answer here">
+  </div>
+
+  <button type="submit">Submit Quiz</button>
+</form>
+
+<script>
+  document.getElementById("quizForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    // Redirects regardless of answers
+    window.location.href = "results.html";
+  });
+</script>
+
+</body>
+</html>
